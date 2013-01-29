@@ -1,0 +1,9 @@
+services:
+    kfi.ecommerce.form.country:
+        class: KFI\GeoBundle\Form\Type\CountryType
+        arguments: [ @doctrine.orm.entity_manager ]
+        tags: [ { name: form.type, alias: kfigeo_country } ]
+    kfi.ecommerce.form.province:
+        class: KFI\GeoBundle\Form\Type\ProvinceType
+        arguments: [ @doctrine.orm.entity_manager ]
+        tags: [ { name: form.type, alias: kfigeo_province } ]
