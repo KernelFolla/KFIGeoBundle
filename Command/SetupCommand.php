@@ -25,9 +25,8 @@ class BackupCommand extends ContainerAwareCommand
     protected function configure()
     {
         $this
-            ->setName('kfi_backup:dbexport')
-            ->setDescription('export the database');
-
+            ->setName('kfi_geo:setup')
+            ->setDescription('setup the database');
     }
 
     protected function execute(InputInterface $input, OutputInterface $output)
