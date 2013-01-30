@@ -1,18 +1,15 @@
 <?php
 
-namespace Mercurio\ComodoBundle\Command;
+namespace KFI\GeoBundle\Command;
 
 use Symfony\Bundle\FrameworkBundle\Command\ContainerAwareCommand;
-use Symfony\Component\Console\Input\InputArgument;
 use Symfony\Component\Console\Input\InputInterface;
-use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 
-use Symfony\Component\Yaml\Yaml;
 use Doctrine\ORM\EntityManager;
 
 
-class BackupCommand extends ContainerAwareCommand
+class SetupCommand extends ContainerAwareCommand
 {
     protected $files = array(
         'geo_country.sql'  => 'Countries',
@@ -35,12 +32,11 @@ class BackupCommand extends ContainerAwareCommand
         $this->manager = $this->getContainer()->get('doctrine.orm.entity_manager');
         foreach ($this->files as $file => $name) {
             $output->writeln("importing $name");
-            $query = $this->manager->createNativeQuery(
+            $this->manager->getConnection()->exec(
                 file_get_contents(
                     __DIR__ . '/../Resources/sql/' . $file
                 )
             );
-            $query->execute();
         }
         $output->writeln("done");
     }
