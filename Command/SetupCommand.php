@@ -12,9 +12,9 @@ use Doctrine\ORM\EntityManager;
 class SetupCommand extends ContainerAwareCommand
 {
     protected $files = array(
-        'geo_country.sql'  => 'Countries',
-        'geo_region.sql'   => 'Italy Regions',
-        'geo_province.sql' => 'Italy Provinces'
+        'kfi_geo_country.sql'  => 'Countries',
+        'kfi_geo_region.sql'   => 'Italy Regions',
+        'kfi_geo_province.sql' => 'Italy Provinces'
     );
     /** @var EntityManager */
     protected $manager;

@@ -32,7 +32,11 @@ class CountryRepository extends EntityRepository
     private function fixCriteria(array $criteria)
     {
         //Unless explicitly requested to return deleted items, we want to return non-deleted items by default
-        if (!in_array('deleted', $criteria)) {
+        if(isset($criteria['deleted'])){
+            if($criteria['deleted'] == 'any'){
+                unset($criteria['deleted']);
+            }
+        }else{
             $criteria['deleted'] = false;
         }
 
