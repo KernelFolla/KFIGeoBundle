@@ -1,32 +1,6 @@
--- phpMyAdmin SQL Dump
--- version 3.4.3
--- http://www.phpmyadmin.net
---
--- Host: localhost
--- Generato il: Gen 31, 2013 alle 17:39
--- Versione del server: 5.5.18
--- Versione PHP: 5.3.17
+DROP TABLE IF EXISTS `kfi_geo_country`;
 
-SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
-SET time_zone = "+00:00";
-
-
-/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
-/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
-/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
-/*!40101 SET NAMES utf8 */;
-
---
--- Database: `tuttorespiro_1`
---
-
--- --------------------------------------------------------
-
---
--- Struttura della tabella `kfi_geo_country`
---
-
-CREATE TABLE IF NOT EXISTS `kfi_geo_country` (
+CREATE TABLE `kfi_geo_country` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `code3` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
   `code2` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
@@ -37,10 +11,6 @@ CREATE TABLE IF NOT EXISTS `kfi_geo_country` (
   `deleted` tinyint(1) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=895 ;
-
---
--- Dump dei dati per la tabella `kfi_geo_country`
---
 
 INSERT INTO `kfi_geo_country` (`id`, `code3`, `code2`, `name`, `continent`, `continentRegion`, `localName`, `deleted`) VALUES
 (4, 'AFG', 'AF', 'Afghanistan', 'Asia', 'Southern and Central Asia', 'Afganistan/Afqanestan', 0),
@@ -281,7 +251,7 @@ INSERT INTO `kfi_geo_country` (`id`, `code3`, `code2`, `name`, `continent`, `con
 (876, 'WLF', 'WF', 'Wallis and Futuna', 'Oceania', 'Polynesia', 'Wallis-et-Futuna', 0),
 (882, 'WSM', 'WS', 'Samoa', 'Oceania', 'Polynesia', 'Samoa', 0),
 (887, 'YEM', 'YE', 'Yemen', 'Asia', 'Middle East', 'Al-Yaman', 0),
-(891, 'YUG', 'YU', 'Yugoslavia', 'Europe', 'Southern Europe', 'Jugoslavija', 0),
+(891, 'YUG', 'YU', 'Yugoslavia', 'Europe', 'Southern Europe', 'Jugoslavija', 1),
 (894, 'ZMB', 'ZM', 'Zambia', 'Africa', 'Eastern Africa', 'Zambia', 0);
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

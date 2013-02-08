@@ -19,7 +19,7 @@ class ProvinceType extends AbstractType
     public function __construct(EntityManager $entityManager)
     {
         $this->repo  = $entityManager->getRepository('KFIGeoBundle:Province');
-        $this->items = $this->repo->findAll();
+        $this->items = $this->repo->findBy(array('deleted' => 0));
     }
 
     public function setDefaultOptions(OptionsResolverInterface $resolver)
