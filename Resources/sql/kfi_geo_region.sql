@@ -1,5 +1,3 @@
-DROP TABLE IF EXISTS `kfi_geo_region`;
-
 CREATE TABLE IF NOT EXISTS `kfi_geo_region` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `code` varchar(3) COLLATE utf8_unicode_ci NOT NULL,

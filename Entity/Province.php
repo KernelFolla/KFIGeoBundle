@@ -22,6 +22,13 @@ class Province
     private $id;
 
     /**
+     * @var string $localName
+     *
+     * @ORM\Column(type="boolean")
+     */
+    private $deleted;
+
+    /**
      * @var string $code
      *
      * @ORM\Column(name="code", type="string", length=2)
@@ -212,5 +219,28 @@ class Province
     public function getCountry()
     {
         return $this->country;
+    }
+
+    /**
+     * Set deleted
+     *
+     * @param boolean $deleted
+     * @return Province
+     */
+    public function setDeleted($deleted)
+    {
+        $this->deleted = $deleted;
+    
+        return $this;
+    }
+
+    /**
+     * Get deleted
+     *
+     * @return boolean 
+     */
+    public function getDeleted()
+    {
+        return $this->deleted;
     }
 }
