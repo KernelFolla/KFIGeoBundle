@@ -1,4 +1,5 @@
-CREATE TABLE `kfi_geo_country` (
+
+CREATE TABLE IF NOT EXISTS `kfi_geo_country` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `code3` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
   `code2` varchar(2) COLLATE utf8_unicode_ci NOT NULL,

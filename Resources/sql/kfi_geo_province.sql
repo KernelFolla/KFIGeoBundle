@@ -1,4 +1,4 @@
-CREATE TABLE `kfi_geo_province` (
+CREATE TABLE IF NOT EXISTS `kfi_geo_province` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `region_id` int(11) DEFAULT NULL,
   `country_id` int(11) DEFAULT NULL,
