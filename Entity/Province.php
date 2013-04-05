@@ -243,4 +243,8 @@ class Province
     {
         return $this->deleted;
     }
+
+    public function __toString(){
+        return $this->getName();
+    }
 }

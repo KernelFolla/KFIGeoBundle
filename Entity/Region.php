@@ -242,4 +242,8 @@ class Region
     {
         return $this->country;
     }
+
+    public function __toString(){
+        return $this->getName();
+    }
 }
