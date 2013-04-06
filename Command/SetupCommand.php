@@ -14,7 +14,8 @@ class SetupCommand extends ContainerAwareCommand
     protected $files = array(
         'kfi_geo_country.sql'  => 'Countries',
         'kfi_geo_region.sql'   => 'Italy Regions',
-        'kfi_geo_province.sql' => 'Italy Provinces'
+        'kfi_geo_province.sql' => 'Italy Provinces',
+        'kfi_geo_city.sql'     => 'Italy Cities'
     );
     /** @var EntityManager */
     protected $manager;
