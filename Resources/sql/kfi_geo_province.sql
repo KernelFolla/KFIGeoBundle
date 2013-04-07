@@ -1,20 +1,3 @@
-CREATE TABLE IF NOT EXISTS `kfi_geo_province` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `region_id` int(11) DEFAULT NULL,
-  `country_id` int(11) DEFAULT NULL,
-  `code` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(60) COLLATE utf8_unicode_ci NOT NULL,
-  `latitude` decimal(9,7) NOT NULL,
-  `longitude` decimal(9,7) NOT NULL,
-  `deleted` tinyint(1) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`id`),
-  KEY `IDX_A463A3AA98260155` (`region_id`),
-  KEY `IDX_A463A3AAF92F3E70` (`country_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=111 ;
-
---
--- Dump dei dati per la tabella `kfi_geo_province`
---
 
 INSERT INTO `kfi_geo_province` (`id`, `region_id`, `country_id`, `code`, `name`, `latitude`, `longitude`, `deleted`) VALUES
 (1, 1, 380, 'TO', 'Torino', 45.0705621, 7.6866186, 0),
@@ -127,7 +110,3 @@ INSERT INTO `kfi_geo_province` (`id`, `region_id`, `country_id`, `code`, `name`,
 (108, 3, 380, 'MB', 'Monza e della Brianza', 45.5840057, 9.2730143, 0),
 (109, 11, 380, 'FM', 'Fermo', 43.1656296, 13.7242222, 0),
 (110, 16, 380, 'BT', 'Barletta-Andria-Trani', 41.3192770, 16.2839900, 0);
-
-ALTER TABLE `kfi_geo_province`
-  ADD CONSTRAINT `FK_A463A3AA98260155` FOREIGN KEY (`region_id`) REFERENCES `kfi_geo_region` (`id`),
-  ADD CONSTRAINT `FK_A463A3AAF92F3E70` FOREIGN KEY (`country_id`) REFERENCES `kfi_geo_country` (`id`);

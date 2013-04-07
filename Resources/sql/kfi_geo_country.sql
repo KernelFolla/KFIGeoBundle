@@ -1,16 +1,3 @@
-
-CREATE TABLE IF NOT EXISTS `kfi_geo_country` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code3` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
-  `code2` varchar(2) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(52) COLLATE utf8_unicode_ci NOT NULL,
-  `continent` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `continentRegion` varchar(26) COLLATE utf8_unicode_ci NOT NULL,
-  `localName` varchar(45) COLLATE utf8_unicode_ci NOT NULL,
-  `deleted` tinyint(1) NOT NULL,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=895 ;
-
 INSERT INTO `kfi_geo_country` (`id`, `code3`, `code2`, `name`, `continent`, `continentRegion`, `localName`, `deleted`) VALUES
 (4, 'AFG', 'AF', 'Afghanistan', 'Asia', 'Southern and Central Asia', 'Afganistan/Afqanestan', 0),
 (8, 'ALB', 'AL', 'Albania', 'Europe', 'Southern Europe', 'ShqipÃ«ria', 0),
@@ -252,7 +239,3 @@ INSERT INTO `kfi_geo_country` (`id`, `code3`, `code2`, `name`, `continent`, `con
 (887, 'YEM', 'YE', 'Yemen', 'Asia', 'Middle East', 'Al-Yaman', 0),
 (891, 'YUG', 'YU', 'Yugoslavia', 'Europe', 'Southern Europe', 'Jugoslavija', 1),
 (894, 'ZMB', 'ZM', 'Zambia', 'Africa', 'Eastern Africa', 'Zambia', 0);
-
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

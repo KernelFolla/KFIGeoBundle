@@ -1,16 +1,3 @@
-CREATE TABLE IF NOT EXISTS `kfi_geo_region` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `code` varchar(3) COLLATE utf8_unicode_ci NOT NULL,
-  `name` varchar(50) COLLATE utf8_unicode_ci NOT NULL,
-  `zone` varchar(20) COLLATE utf8_unicode_ci NOT NULL,
-  `latitude` decimal(9,7) NOT NULL,
-  `longitude` decimal(9,7) NOT NULL,
-  `deleted` tinyint(1) NOT NULL,
-  `country_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`id`),
-  KEY `IDX_A4B3C808F92F3E70` (`country_id`)
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci AUTO_INCREMENT=21 ;
-
 INSERT INTO `kfi_geo_region` (`id`, `code`, `name`, `zone`, `latitude`, `longitude`, `deleted`, `country_id`) VALUES
 (1, 'PIE', 'Piemonte', 'NORD-OVEST', 45.0000000, 7.5153885, 0, 380),
 (2, 'VDA', 'Valle d''Aosta/Vallée d''Aoste', 'NORD-OVEST', 45.7388878, 7.4261866, 0, 380),
@@ -32,7 +19,3 @@ INSERT INTO `kfi_geo_region` (`id`, `code`, `name`, `zone`, `latitude`, `longitu
 (18, 'CAL', 'Calabria', 'SUD', 44.6670370, 11.5097037, 0, 380),
 (19, 'SIC', 'Sicilia', 'ISOLE', 37.3979297, 14.6587821, 0, 380),
 (20, 'SAR', 'Sardegna', 'ISOLE', 40.1208752, 9.0128926, 0, 380);
-
-ALTER TABLE `kfi_geo_region`
-  ADD CONSTRAINT `FK_A4B3C808F92F3E70` FOREIGN KEY (`country_id`) REFERENCES `kfi_geo_country` (`id`);
-
